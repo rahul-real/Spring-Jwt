@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: JKDK
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=Rahul
+    username: SQL_Login
+    password: qwerty123
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    hikari:
+      pool-name: SecurityCP
+      connection-timeout: 30000
+      max-lifeTime: 2000000
+      maximum-pool-size: 100
+      idle-timeout: 30000
+      minimum-idle: 5
+    disable-prepared-statements-pool: false
+    prepared-statements-cache-size: 250
+rahul:
+  stored-proc-name:
+    getUserData: dbo.Get_Users
